@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
+                            <label id="lb1"></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                            <label for="lb2"></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" name="submit" id="submit" class="form-submit" value="Sign up" onclick="validation()">
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function validation()
+        {
+        var name=fm.name,value;
+        var email=fm.email,value;
+        var pass=fm.passward,value;
+        var repass=fm.re_passward,value;
+        } 
+    //    --------name
+        var ptr1=/[a-zA-Z]/;
+        if(name.length==0)
+        {
+   document.getelementbyid("lb1").innerHTML="please enter your name"
+   document.getelementbyid("lb1").style.Color="red"
+   document.getelementbyid("name").style.borderColor="red"
+        }
+        else if(ptr1.test(name) == false)
+        {
+            document.getelementbyid("lb1").innerHTML="please enter valid name"
+            document.getelementbyid("lb1").style.Color="red"
+            document.getelementbyid("name").style.borderColor="red"
+        }
+        else{
+            document.getelementbyid("lb1").innerHTML=""
+            document.getelementbyid("name").style.borderColour="green"
+        }
+        // ======email
+       var ptr2=/\w+@[a-zA-Z]+\.[a-zA-Z]{2,3}/;
+       if(email.length==0)
+       {
+        document.getelementbyid("lb2").innerHTML="please enter your email"
+            document.getelementbyid("lb2").style.Color="red"
+            document.getelementbyid("email").style.borderColor="red"
+       }
+       else if(ptr1.test(name) == false)
+        {
+            document.getelementbyid("lb2").innerHTML="please enter valid email"
+            document.getelementbyid("lb2").style.Color="red"
+            document.getelementbyid("email").style.borderColor="red"
+        }
+        else{
+            document.getelementbyid("lb2").innerHTML=""
+            document.getelementbyid("email").style.borderColour="green"
+        }
+            //    ========passs
+            var ptr3=/^\W{7$/;
+            if(pass.length==0)
+        {
+   document.getelementbyid("lb3").innerHTML="please enter your passward"
+   document.getelementbyid("lb3").style.Color="red"
+   document.getelementbyid("pass").style.borderColor="red"
+        }
+        else if(ptr3.test(pass) == false)
+        {
+            document.getelementbyid("lb3").innerHTML="please enter valid passward"
+            document.getelementbyid("lb3").style.Color="red"
+            document.getelementbyid("pass").style.borderColor="red"
+        }
+        else{
+            document.getelementbyid("lb3").innerHTML=""
+            document.getelementbyid("pass").style.borderColour="green"
+        }
+        // ======re pass
+        var ptr4 =
+            if(repass.length==0)
+        {
+   document.getelementbyid("lb4").innerHTML="please enter your repassward"
+   document.getelementbyid("lb4").style.Color="red"
+   document.getelementbyid("repass").style.borderColor="red"
+        }
+        else if(ptr4.test(repass) == false)
+        {
+            document.getelementbyid("lb4").innerHTML="please enter valid repassward"
+            document.getelementbyid("lb4").style.Color="red"
+            document.getelementbyid("repass").style.borderColor="red"
+        }
+        else{
+            document.getelementbyid("lb4").innerHTML=""
+            document.getelementbyid("repass").style.borderColour="green"
+        }
+
+
+    </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
